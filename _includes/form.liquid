@@ -1,0 +1,30 @@
+<style>
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-header {
+    width: 100%;
+    text-align: right;
+  }
+  .center {
+    text-align: center;
+  }
+</style>
+
+<section class="layout-wrapper form-content">
+  <div class="form-header">
+    <!--- <p class="center">如果你想跟你所在区域的人取得联系，加入到基督信仰社区，请填写此表单：</p> --->
+    <span title="Close" style="display:none;cursor:pointer;font-size:45px;margin:auto;color:#fff;" onclick="closePopup()">&times;</span>
+  </div>
+  <div class="container-md form">
+    <div id="form-wrapper">
+      <div id="iframe-container">
+        <iframe id="lazy-iframe"></iframe>
+      </div>
+    </div>
+    <!-- <button id="get-connected">点击这里和我们取得联系</button> -->
+  </div>
+</section>

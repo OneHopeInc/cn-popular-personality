@@ -1,0 +1,35 @@
+blockquote {
+	text-align: center;
+	line-height: 1.4;
+	font-size: 1.2em;
+	font-weight: 400;
+	margin: var(--space-md) 0;
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+		margin: var(--space-md) auto;
+		height: var(--border-width);
+		width: 50%;
+		background: #ccc;
+	}
+}
+cite {
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	margin-top: var(--space-sm);
+	display: block;
+	font-weight: 600;
+	font-style: normal;
+}
+
+blockquote.no-line{
+	&:after {
+		content: '';
+		display: none;
+		margin: var(--space-md) auto;
+		height: var(--border-width);
+		width: 50%;
+		background: #ccc;
+	}
+}

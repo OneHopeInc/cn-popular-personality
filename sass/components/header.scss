@@ -1,0 +1,29 @@
+.logo-wrapper {
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	.logo {
+		display: block;
+		width: 5em;
+		margin-right: 1em;
+	}
+}
+.header {
+	position: relative;
+	z-index: 1;
+	padding: 1em var(--space-sm);
+
+		@include md-and-up {
+			padding: 1em var(--space-md);
+		}
+	background: var(--color-dark);
+}
+.header-content {
+	width: 100%;
+	max-width: #{$breakpoint-lg};
+	margin: 0 auto;
+	
+}

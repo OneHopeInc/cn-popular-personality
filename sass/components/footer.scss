@@ -1,0 +1,28 @@
+footer {
+
+	padding: var(--space-sm);
+
+	@include md-and-up {
+		padding: var(--space-md);
+	}
+	
+	text-align: center;
+	background: var(--color-dark);
+	color: var(--color-light);
+
+	a:link {
+		color: #fcca91;
+	}
+	p {
+		font-size: 1em;
+	}
+	.copyright {
+		font-size: 0.75em;
+	}
+	.logo-wrapper {
+		.logo {
+			width: 5em;
+			margin: 0 auto;
+		}
+	}
+}

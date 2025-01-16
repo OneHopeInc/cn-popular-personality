@@ -1,0 +1,41 @@
+// List
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ul:not([class]) {
+	list-style-type: disc;
+	margin-left: 1.2em;
+	li {
+		padding-left: 0em;
+		margin-bottom: 0.75em;
+	}
+	ul {
+		margin: 1em 0 0 1em;
+	}
+	ol {
+		margin: 1em 0 0 2em;
+	}
+
+	> li > ul {
+		list-style-type: circle;
+	}
+	> li > ul > li > ul {
+		list-style-type: square;
+	}
+}
+
+ol:not([class]) {
+	margin-top: 0;
+	margin-left: 2em;
+	padding-left: 0;
+	list-style: decimal;
+	li {
+		padding-left: 0em;
+		margin-bottom: 0.75em;
+	}
+	ol {
+		margin: 1em 0 0 2em;
+	}
+	ul {
+		margin: 1em 0 0 1em;
+	}
+}

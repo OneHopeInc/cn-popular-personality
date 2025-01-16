@@ -1,0 +1,112 @@
+.home-background {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 60% 50%;
+		opacity: 0.5;
+		transform: scaleX(-1);
+		@include md-and-up {
+			object-position: 50% 50%;
+		}
+	}
+}
+.home {
+	.page {
+		background: var(--color-dark);
+		position: relative;
+		//min-height: 100vh;
+		color: var(--color-light);
+		display: flex;
+		flex-direction: column;
+	}
+	.header {
+		background: rgba(#203038, 0.5);
+	}
+	.header-content {
+		max-width: $breakpoint-md;
+	}
+}
+
+.home-content {
+	position: relative;
+	z-index: 1;
+	margin-top: auto;
+	margin-bottom: 8vw;
+
+	.intro {
+		color: #faf0d1;
+		font-size: 1.4em;
+		line-height: 1.2;
+		text-shadow: 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.3);
+		margin-top: 2.5em;
+		margin-left: 0.25em;
+	}
+	h1 {
+		margin: 0 0 8vw 0;
+		text-shadow: 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.3);
+		font-size: calc(3em + 2vw);
+		text-transform: uppercase;
+		font-weight: 900;
+		@include md-and-up {
+			margin-bottom: var(--space-lg);
+			width: 80%;
+		}
+	}
+}
+.button-wrapper {
+	margin: 0;
+	display: grid;
+	grid-gap: var(--space-sm);
+	grid-template-columns: 1fr;
+	// @include md-and-up {
+	// 	grid-template-columns: 1fr 1fr;
+	// }
+	.button {
+		width: 100%;
+		box-shadow: 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.3);
+		transition: all 250ms ease-out;
+		color: #1b1b1b;
+		//@include md-and-up {
+		font-size: 1.5em;
+		height: 3rem;
+		line-height: 0.9em;
+		//}
+		&:hover {
+			filter: brightness(1.1);
+			transform: scale(1.02);
+			box-shadow: 0.25em 0.25em 1em rgba(0, 0, 0, 0.5);
+		}
+
+		&.blue {
+			background-color: #15b6e9;
+			border-color: #15b6e9;
+		}
+		&.orange {
+			background-color: #f6c518;
+			border-color: #f6c518;
+		}
+		&.red {
+			background-color: #db5897;
+			border-color: #db5897;
+		}
+		&.green {
+			background-color: #00796b;
+			border-color: #00796b;
+		}
+		&.purple {
+			background-color: #5e35b1;
+			border-color: #5e35b1;
+		}
+	}
+}
+.instruction-text {
+	font-size: 0.85rem;
+}

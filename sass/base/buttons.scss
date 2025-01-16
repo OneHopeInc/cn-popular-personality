@@ -1,0 +1,55 @@
+:is(.button, button, input[type='button'], input[type='reset'], input[type='submit']) {
+	background-color: var(--color-link-default);
+	border: var(--border-width) solid var(--color-link-default);
+	color: var(--color-light);
+
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.9rem;
+	font-weight: 700;
+	font-family: var(--font-sans);
+
+	letter-spacing: 0.15rem;
+
+	padding: 0.7rem 2rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+	transition: 0.2s ease;
+	width: 100%;
+	&:hover {
+		background-color: var(--color-link-hover);
+		border: var(--border-width) solid var(--color-link-hover);
+	}
+	@include sm-and-up {
+		width: auto;
+	}
+}
+:is(.button, button, input[type='button'], input[type='reset'], input[type='submit']) :is(:hover, :focus) {
+	background-color: var(--color-secondary);
+	border-color: var(--color-secondary);
+	color: var(--color-light);
+	outline: 0;
+}
+:is(.button, button, input[type='button'], input[type='reset'], input[type='submit']) [disabled] {
+	cursor: default;
+	opacity: 0.5;
+}
+:is(.button, button, input[type='button'], input[type='reset'], input[type='submit']) [disabled] :is(:hover, :focus) {
+	background-color: var(--color-primary);
+	border-color: var(--color-primary);
+}
+
+.button-outline {
+	background-color: transparent;
+	color: var(--color-primary);
+}
+
+.button-outline :is(:hover, :focus) {
+	background-color: transparent;
+	border-color: var(--color-secondary);
+	color: var(--color-secondary);
+}

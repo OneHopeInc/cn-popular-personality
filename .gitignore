@@ -1,0 +1,10 @@
+.DS_Store
+**/.DS_Store
+package-lock.json
+node_modules
+dist
+.cache
+_site/**
+
+# Do not ignore the _site/_redirects file
+!_site/_redirects

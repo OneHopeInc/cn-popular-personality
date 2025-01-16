@@ -1,0 +1,34 @@
+.page {
+	flex-grow:1;
+	> * {
+		padding: var(--space-sm);
+
+		@include md-and-up {
+			padding: var(--space-md);
+		}
+	}
+}
+.layout-wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+.page-title {
+	padding: var(--space-sm) 0;
+}
+.container-md {
+	width: 100%;
+	max-width: $breakpoint-md;
+	margin: 0 auto;
+}
+
+.container-lg {
+	width: 100%;
+	max-width: $breakpoint-lg;
+	margin: 0 auto;
+}
+
+.alignfull {
+	max-width: none;
+	width: 100%;
+	margin: 0 auto;
+}

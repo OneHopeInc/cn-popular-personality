@@ -1,0 +1,78 @@
+<!-- Popup -->
+<style>
+	.popup {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.75);
+		z-index: 9999;
+		overflow-y: auto;
+	}
+	#popup-button {
+		position: fixed;
+		right: 3rem;
+		bottom: 3rem;
+		padding: 0.5rem;
+		width: 8rem;
+		white-space: normal;
+		opacity: 0;
+		transition: opacity 0.2s;
+	}
+</style>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    {% include 'form' %}
+  </div>
+</div>
+<button id="popup-button" onclick="showPopup()">
+	和我们聊一聊
+</button>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		var body = document.querySelector('body');
+		var popup = document.getElementById("popup");
+		var paragraph = document.querySelector('.popup-content .layout-wrapper .form-header p');
+		var clsBtnSpan = document.querySelector('.popup-content .layout-wrapper .form-header span');
+		var popupButton = document.getElementById('popup-button');
+
+		function closePopup() {
+			popup.style.display = "none";
+			clsBtnSpan.style.display = "none";
+			body.style.overflow = "auto";
+		};
+		window.closePopup = closePopup;
+		
+		function showPopup() {
+			body.style.overflow = "hidden"; // you should use "hidden" instead of "none"
+			//paragraph.style.display = "none";
+			clsBtnSpan.style.display = "block";
+			popup.style.display = "block";
+			sessionStorage.setItem('popupShown', 'true'); // Store a flag in session storage
+		};
+		window.showPopup = showPopup;
+
+		function showPopupButton() {
+			popupButton.style.opacity = 1;
+		}
+
+		window.addEventListener("scroll", function() {
+			
+			var scrollHeight = Math.max(
+				document.body.scrollHeight, document.documentElement.scrollHeight,
+				document.body.offsetHeight, document.documentElement.offsetHeight,
+				document.body.clientHeight, document.documentElement.clientHeight
+			);
+			var scrollPosition = window.pageYOffset;
+
+			if (scrollPosition / scrollHeight > 0.35) { // If user scrolled more than 35%
+				showPopupButton();
+				window.removeEventListener('scroll', arguments.callee); // Remove the event listener
+			}
+		});
+	});
+</script>

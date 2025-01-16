@@ -1,0 +1,41 @@
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.text-and-media {
+	display: flex;
+	gap: var(--space-md);
+	flex-direction: column;
+	.media {
+		width: 100%;
+	}
+
+	@include sm-and-up {
+		gap: var(--space-lg);
+	}
+
+	@include md-and-up {
+		gap: var(--space-lg);
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		.media {
+			width: auto;
+		}
+	}
+}
+
+
+.image-bottom img{
+	object-position: bottom;
+}
+
+.image-center img{
+	object-position: bottom;
+}
+
+.image-top img{
+	object-position: top;
+}

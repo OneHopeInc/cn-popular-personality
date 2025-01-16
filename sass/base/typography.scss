@@ -1,0 +1,85 @@
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--font-headings);
+	font-weight: 700;
+	line-height: 1.2;
+	margin: 0 0 0.5rem 0;
+}
+
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.7rem;
+}
+h4 {
+	font-size: 1.2rem;
+}
+
+p {
+	margin: 0.75em 0;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p,
+ol + p,
+ul + p {
+	margin-top: var(--space-sm);
+}
+:is(p, ul, ol) + :is(h1, h2, h3, h4, h5, h6, ul, ol){
+	margin-top: var(--space-md);
+}
+
+img {
+	width: 100%;
+}
+
+hr {
+	border: none;
+	margin: var(--space-md) 0;
+	height: var(--border-width);
+	background-color: var(--color-light-gray);
+}
+
+.hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	left: 0;
+	z-index: -10;
+	pointer-events: none;
+}
+
+.callout {
+	font-size: calc(1.5em + 0.5vw);
+	line-height: 1.3;
+	font-weight: 900;
+	color: #0b3448;
+	text-transform: uppercase;
+}
+
+strong {
+	font-weight: bold;
+}em{
+	font-style:italic;
+}

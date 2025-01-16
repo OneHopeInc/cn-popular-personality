@@ -1,0 +1,24 @@
+{
+	"name": "如果是真的怎么办",
+	"short_name": "如果是真的怎么办",
+	"display": "standalone",
+	"scope": "/",
+	"start_url": "/index.html",
+	"background_color": "#203038",
+	"theme_color": "#203038",
+	"description": "This is a place where you can feel comfortable to explore your spiritual journey, ask questions (even the tough ones) and get them answered!",
+	"icons": [
+		{ 
+			"src": "/assets/favicon/favicon-192.png", 
+			"type": "image/png", 
+			"sizes": "192x192",
+			"purpose": "any maskable"
+		},
+		{ 
+			"src": "/assets/favicon/favicon-512.png", 
+			"type": "image/png", 
+			"sizes": "512x512",
+			"purpose": "any maskable"
+		}
+	]
+  }

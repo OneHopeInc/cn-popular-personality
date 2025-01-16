@@ -1,0 +1,55 @@
+:root {
+	--color-light-gray: #d9dbde;
+	--color-light: #f2f2f2;
+	--color-dark: #203038;
+	--color-primary: rgb(47, 83, 151);
+	--color-secondary: rgb(35, 56, 100);
+	--color-accent-dark: #ffca00;
+	--color-accent: #ffd300;
+	--border-radius: 0.4rem;
+	--border-width: 2px;
+	--space-xs: 0.5rem;
+	--space-sm: 1rem;
+	--space-md: 2rem;
+	--space-lg: 4rem;
+	--space-xl: 6rem;
+	--breakpoint-sm: $breakpoint-sm;
+	--breakpoint-md: $breakpoint-md;
+	--breakpoint-lg: $breakpoint-lg;
+	--font-headings: hellofont-id-leyuanti, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	--font-sans: hellofont-id-leyuanti, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	--font-monospace: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+	--color-link-default: #246b8f;
+	--color-link-hover: #16455c;
+	--color-link-visited: #5c6bc0;
+}
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	text-rendering: optimizeSpeed;
+	line-height: 1.4;
+	font-size: 0.875rem;
+	@include sm-and-up {
+		font-size: 1rem;
+	}
+	@include md-and-up {
+		font-size: 1.25rem;
+	}
+}
+
+body {
+	font-family: var(--font-sans);
+	line-height: 1.5;
+	color: var(--color-dark);
+	margin: auto 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}

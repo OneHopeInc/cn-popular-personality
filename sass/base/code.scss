@@ -1,0 +1,23 @@
+code {
+	font-family: var(--font-monospace);
+	//background: var(--color-dark);
+	//border-radius: .4rem;
+	//font-size: 86%;
+	//margin: 0 .2rem;
+	//padding: .2rem .5rem;
+	white-space: nowrap;
+}
+
+pre {
+	font-family: var(--font-monospace);
+	//background: var(--color-dark);
+	//border-left: .3rem solid var(--color-primary);
+	overflow-y: hidden;
+
+	& > code {
+		border-radius: 0;
+		display: block;
+		padding: 1rem 1.5rem;
+		white-space: pre;
+	}
+}
