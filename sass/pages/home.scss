@@ -66,11 +66,13 @@
 	display: grid;
 	grid-gap: var(--space-sm);
 	grid-template-columns: 1fr;
+	text-align: center;
 	// @include md-and-up {
 	// 	grid-template-columns: 1fr 1fr;
 	// }
 	.button {
 		width: 100%;
+		max-width: 600px;
 		box-shadow: 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.3);
 		transition: all 250ms ease-out;
 		color: #1b1b1b;
@@ -94,16 +96,20 @@
 			border-color: #f6c518;
 		}
 		&.red {
-			background-color: #db5897;
-			border-color: #db5897;
+			background-color: #f6416c;
+			border-color: #f6416c;
 		}
 		&.green {
-			background-color: #00796b;
-			border-color: #00796b;
+			background-color: #00b8a9;
+			border-color: #00b8a9;
 		}
 		&.purple {
 			background-color: #5e35b1;
 			border-color: #5e35b1;
+		}
+		&.yellow {
+			background-color: #ffde7d;
+			border-color: #ffde7d;
 		}
 	}
 }
