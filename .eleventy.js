@@ -1,14 +1,30 @@
 const Image = require('@11ty/eleventy-img');
 const path = require('path');
+const crypto = require('crypto');
+const fs = require('fs');
+
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addLiquidShortcode('image', imageShortcode);
 	eleventyConfig.addPassthroughCopy('./assets');
 	eleventyConfig.addPassthroughCopy('./manifest.json');
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+	// Add a filter to create a hash based on file contents
+	eleventyConfig.addFilter('fileHash', function(filepath) {
+		const fullPath = path.join(__dirname, filepath);
+		try {
+			const content = fs.readFileSync(fullPath, 'utf8');
+			return crypto.createHash('md5').update(content).digest('hex').slice(0, 8);
+		} catch (e) {
+			console.warn(`Could not hash file ${filepath}: ${e.message}`);
+			return 'dev';
+		}
+	});
+
 	eleventyConfig.setBrowserSyncConfig({
 		files: ['./**/*.css', './**/*.js'],
 	});
+
 	return {
 		dir: {
 			layouts: '_layouts',
