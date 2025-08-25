@@ -14,7 +14,7 @@ const lazyIframes = document.querySelectorAll('#lazy-iframe');
 for (let iframe of lazyIframes) {
   iframe.setAttribute(
     'data-src',
-    iframe.src = 'https://form.popular-personality.co/submit/?theme='+color+'&site='+currentUrl
+    iframe.src = 'https://form.' + window.location.hostname + '/submit/?theme='+color+'&site='+currentUrl
   );
 }
 
@@ -46,7 +46,7 @@ lazyIframes.forEach((iframe) => {
 // Use site url as form submission origin
 window.addEventListener('message', (event) => {
   // Check the origin of the message for security purposes
-  const regex = /^https?:\/\/(form.popular-personality.co)/i;
+  const regex = new RegExp(`^https?:\\/\\/(form\\.${window.location.hostname.replace(/\./g, '\\.')})`,'i');
   if (!regex.test(event.origin)) {
     return;
   }
